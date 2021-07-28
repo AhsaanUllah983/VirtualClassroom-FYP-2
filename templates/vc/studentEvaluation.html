@@ -1,0 +1,55 @@
+{% extends 'vc/basic.html'%}
+{% load static %}
+
+{%block title%}{% endblock%}
+
+
+
+{%block title_extra%}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+{% endblock %}
+
+{% block css %}
+
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="container" style="padding:40px">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>Date</th>
+        <th>Percentage</th>
+        <th>Attendance Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for att in attendances %}
+      <tr>
+        <td>{{att.studentId}}</td>
+        <td>{{att.date}}</td>
+        <td>{{att.percentage}}</td>
+        <td>{{att.status}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+
+
+{% endblock %}
